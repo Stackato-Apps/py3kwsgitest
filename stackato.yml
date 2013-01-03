@@ -4,8 +4,13 @@ framework:
   runtime: python32
   start-file: app.py
 mem: 64M
+
+# services:
+#   ${name}-db: postgresql
+
 requirements:
   pypm:
+    - bottle
     - multipart
     - jinja2
     - sqlalchemy
