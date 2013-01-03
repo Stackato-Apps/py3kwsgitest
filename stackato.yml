@@ -5,9 +5,6 @@ framework:
   start-file: app.py
 mem: 64M
 
-# services:
-#   ${name}-db: postgresql
-
 requirements:
   pypm:
     - bottle
