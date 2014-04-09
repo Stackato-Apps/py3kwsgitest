@@ -27,6 +27,7 @@ import functools, hashlib, traceback
 import bottle, multipart, sqlalchemy, sqlalchemy.orm
 
 import cfg, tables, orm
+import os
 
 app = bottle.Bottle()
 engine = sqlalchemy.create_engine(cfg.db_connect_url, connect_args=cfg.db_connect_args)
@@ -115,7 +116,8 @@ def server_static(filename):
     return bottle.static_file(filename, root=cfg.static_path)
 
 if __name__ == '__main__':
+    port = int(os.getenv('PORT', '8000'))
     bottle.debug(True)
-    bottle.run(app=app, host='0.0.0.0', reloader=True)
+    bottle.run(app=app, host='0.0.0.0', port = port, reloader=True)
 else:
     application = app
