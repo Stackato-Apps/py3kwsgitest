@@ -1,6 +1,0 @@
-name: py3kwsgitest 
-
-mem: 64M
-
-min_version:
-  client: 1.4.3
