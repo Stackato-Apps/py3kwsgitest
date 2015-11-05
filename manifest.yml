@@ -1,6 +1,6 @@
 applications:
 - name: py3kwsgitest
-  mem: 64M
+  memory: 64M
   stackato:
     min_version:
       client: 1.4.3
