@@ -1,6 +1,5 @@
 applications:
 - name: py3kwsgitest
+  buildpack: https://github.com/cloudfoundry/python-buildpack
   memory: 64M
-  stackato:
-    min_version:
-      client: 1.4.3
+  stack: cflinuxfs2
